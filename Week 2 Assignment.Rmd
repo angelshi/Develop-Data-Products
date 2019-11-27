@@ -1,0 +1,31 @@
+---
+title: "Week 2 Assignment"
+author: "Tianxiao Shi"
+date: "11/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+Create a web page using R Markdown that features a map created with Leaflet.
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. 
+
+## Review criteria
+The rubric contains the following two questions:
+* Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+* Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+## Submission
+Here is my home location in Singapore.
+
+```{r}
+library(knitr)
+library(leaflet)
+library(dplyr)
+map<-leaflet() %>% addTiles()%>% addMarkers(lat=40.756,lng=-73.985,popup="Angel's home")
+map
+```
